@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% from 'macros.html' import render_input %}
+
+{% block  content %}
+	<h1 class="task">Create task</h1>
+    <form method="post" action="/create">
+    <input type="hidden" value="PUT" name="_method">
+        {{ render_input('task', 'Entry task')}}
+    <div class="control">
+        <button class="button is-primary" type="submit">Save</button>
+    </div>
+    </form>
+{% endblock %}
